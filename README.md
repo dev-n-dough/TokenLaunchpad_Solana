@@ -6,3 +6,8 @@ This app allows users to launch custom tokens(Token 2022) on Solana with metadat
 - React
 - Javascript
 - Solana libraries
+
+## Quickstart
+- Clone
+- `npm i`
+- `npm run dev`
