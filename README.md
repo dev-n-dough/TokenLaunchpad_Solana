@@ -11,3 +11,7 @@ This app allows users to launch custom tokens(Token 2022) on Solana with metadat
 - Clone
 - `npm i`
 - `npm run dev`
+
+### Later 
+
+- Figure out if we can bundle all the 3 transactions together so user only has to sign once(especially since `tx1` requires a partial sign and others dont)
