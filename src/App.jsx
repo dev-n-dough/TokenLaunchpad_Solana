@@ -19,25 +19,34 @@ function App() {
   const local = "http://localhost:8899";
 
   return (
-        <ConnectionProvider endpoint={devnet}>
-            <WalletProvider wallets={[]} autoConnect>
-                <WalletModalProvider>
-                <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                padding: 20
-                }}>
+    <ConnectionProvider endpoint={devnet}>
+      <WalletProvider wallets={[]} autoConnect>
+        <WalletModalProvider>
+          <div className="app">
+            {/* Header */}
+            <header className="header">
+              <h1 className="logo">🚀 Token Launchpad</h1>
+              <div className="wallet-buttons">
+                <WalletMultiButton />
+                <WalletDisconnectButton />
+              </div>
+            </header>
 
-                      <WalletMultiButton></WalletMultiButton>
-                      <WalletDisconnectButton></WalletDisconnectButton>
-                </div>
-                      <TokenLaunchpad></TokenLaunchpad>
+            {/* Main Content */}
+            <main className="main-content">
+              <TokenLaunchpad />
+            </main>
 
-
-                </WalletModalProvider>
-            </WalletProvider>
-        </ConnectionProvider>
-    );
+            {/* Footer */}
+            <footer className="footer">
+              <p>Built on Solana ⚡</p>
+            </footer>
+          </div>
+        </WalletModalProvider>
+      </WalletProvider>
+    </ConnectionProvider>
+  );
 }
+
 
 export default App
